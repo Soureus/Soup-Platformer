@@ -88,11 +88,16 @@ public class Level1 extends World{
             if (tiles.get(i).isIntractable()) {
                 if (handler.getPlayer().getBounds2().intersects(tiles.get(i).getHitBox()) && !tiles.get(i).isInteracted()) {
                     switch (tiles.get(i).getId()) {
-                        case 500 ->{tiles.add(new Box(501, 200, 550, handler)); tileCollision(i); removeAssets = true;}
-                        case 501 ->{tiles.add(new Box(502, 350, 500, handler)); tileCollision(i);}
-                        case 502 ->{tiles.add(new Box(503, 100, 500, handler));tileCollision(i);}
-                        case 503 ->{tiles.add(new Box(504, 400, 525, handler));soups.add(new Soup1(400,475,50,50,handler));tileCollision(i);}
-                        case 504 ->{makeEnding();tileCollision(i);}
+                        case 500 : {tiles.add(new Box(501, 200, 550, handler)); tileCollision(i); removeAssets = true;
+                        break;}
+                        case 501 :{tiles.add(new Box(502, 350, 500, handler)); tileCollision(i);
+                        break;}
+                        case 502 :{tiles.add(new Box(503, 100, 500, handler));tileCollision(i);
+                        break;}
+                        case 503 : {tiles.add(new Box(504, 400, 525, handler));soups.add(new Soup1(400,475,50,50,handler));tileCollision(i);
+                        break;}
+                        case 504 : {makeEnding();tileCollision(i);
+                        break;}
 
 //                    if(handler.getPlayer().getHitBox().getX() + handler.getCamera().getxOffset() > tiles.get(i+1).getStartX() && handler.getPlayer().getX() + handler.getCamera().getxOffset() < tiles.get(i+1).getStartX() + 50)
 //                        handler.getCamera().setxOffset(handler.getCamera().getxOffset() + tiles.get(i).getX()- handler.getPlayer().getX());

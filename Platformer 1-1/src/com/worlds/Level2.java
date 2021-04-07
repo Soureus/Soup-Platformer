@@ -80,19 +80,21 @@ public class Level2 extends World {
             if (handler.getPlayer().getBounds2().intersects(tiles.get(i).getHitBox())) {
                 if (tiles.get(i).getId() >= 500) {
                     switch (tiles.get(i).getId()) {
-                        case 500 -> tiles.add(new Box(501, 23 * 50, 600, handler));
-                        case 501 -> tiles.add(new Box(502, 27 * 50, 600, handler));
-                        case 502 -> tiles.add(new Box(503, 24 * 50, 600, handler));
-                        case 503 -> tiles.add(new Box(504, 30 * 50, 600, handler));
-                        case 504 -> {
+                        case 500 : tiles.add(new Box(501, 23 * 50, 600, handler)); break;
+                        case 501 : tiles.add(new Box(502, 27 * 50, 600, handler)); break;
+                        case 502 : tiles.add(new Box(503, 24 * 50, 600, handler)); break;
+                        case 503 : tiles.add(new Box(504, 30 * 50, 600, handler)); break;
+                        case 504 : {
                             tiles.add(new Box(505, 24 * 50, 600, handler));
                             soups.add(new Soup1(24 * 50, 550, 50, 50, handler));
+                            break;
                         }
-                        case 505 -> {
+                        case 505 : {
                             for (int j = 33; j < 40; j++) {
                                 tiles.add(new Box(0, j * 50, 600, handler));
                             }
                             portals.add(new Level2Portal(45 * 50, 525, 150, 150, handler));
+                            break;
                         }
                     }
                 }
