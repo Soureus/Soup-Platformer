@@ -116,7 +116,7 @@ public class Level1 extends World{
     public void render(Graphics2D gtd) {
         super.render(gtd);
         makeAssets(gtd);
-        if (handler.getKeyManager().devSkip) World.setCurrentWorld(new Level1(handler));
+        if (handler.getKeyManager().devSkip) World.setCurrentWorld(new Level3(handler));
     }
 
     public void tileCollision(int i){

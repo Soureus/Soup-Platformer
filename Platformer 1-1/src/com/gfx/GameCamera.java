@@ -1,6 +1,8 @@
 package com.gfx;
 
 import com.sour.Player;
+import com.tiles.MovingPlatform;
+import com.tiles.Tile;
 import com.utils.Handler;
 
 public class GameCamera {

@@ -6,7 +6,7 @@ public class Assets {
 
     public static final int width = 32, height = 32;
 
-    public static BufferedImage wall, play, playClicked, quit, quitClicked, soup, player, greenSoup, purpleSoup, jumpBoost, speedBoost, teleport, portal, box;
+    public static BufferedImage wall, play, playClicked, quit, quitClicked, soup, player, greenSoup, purpleSoup, jumpBoost, speedBoost, teleport, portal, box, movingPlatform;
 
     public static void init(){
         SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/Textures/spriteSheet.png"));
@@ -25,6 +25,7 @@ public class Assets {
         teleport = ImageLoader.loadImage("/Textures/Teleport.png");
         portal = ImageLoader.loadImage("/Textures/Portal.png");
         box = ImageLoader.loadImage("/Textures/box.png");
+        movingPlatform = ImageLoader.loadImage("/Textures/movingPlatform.png");
     }
 
 }

@@ -12,9 +12,10 @@ public class Tile {
 
     public static ArrayList<Tile> tiles = new ArrayList<>();
     private Rectangle hitBox;
-    private int x, y;
-    private int startX, startY;
+    protected int x, y;
+    protected int startX, startY;
     Timer timer = new Timer();
+    protected int platformxVelocity;
 
     //CLASS
     protected BufferedImage texture;
@@ -22,7 +23,8 @@ public class Tile {
     protected  Handler handler;
     protected boolean interacted = false;
     protected boolean intractable = false;
-    protected static final int tileWidth = 50, tileHeight = 50;
+    protected static int tileWidth = 50;
+    protected static int tileHeight = 50;
 
     public Tile(BufferedImage texture, int id, int x, int y, Handler handler, boolean intractable){
         this.texture = texture;
@@ -89,7 +91,11 @@ public class Tile {
     //TICK & RENDER
 
     public int tick(){
+
         x = (int)(startX - handler.getCamera().getxOffset());
+        if (canMove()){
+            move();
+        }
 
         hitBox.x  = x;
         hitBox.y = y;
@@ -100,6 +106,14 @@ public class Tile {
     public void render(Graphics2D gtd){
         gtd.drawImage(texture,this.x,this.y,tileWidth,tileHeight,null);
         //gtd.fill(hitBox);
+    }
+
+    public boolean canMove() {
+        return false;
+    }
+
+    public void move(){
+
     }
 
     public int getStartX() {
@@ -124,5 +138,13 @@ public class Tile {
 
     public void setTimer(Timer timer) {
         this.timer = timer;
+    }
+
+    public int getPlatformxVelocity() {
+        return platformxVelocity;
+    }
+
+    public void setPlatformxVelocity(int platformxVelocity) {
+        this.platformxVelocity = platformxVelocity;
     }
 }

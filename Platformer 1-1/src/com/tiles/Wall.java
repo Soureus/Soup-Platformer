@@ -12,6 +12,8 @@ public class Wall extends Tile{
 
     public Wall(int id, int x, int y, Handler handler, boolean intractable) {
         super(Assets.wall, id, x, y, handler, intractable);
+        tileWidth = 50;
+        tileHeight = 50;
     }
 
     @Override

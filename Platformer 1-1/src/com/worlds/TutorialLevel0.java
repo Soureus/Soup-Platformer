@@ -66,7 +66,7 @@ public class TutorialLevel0 extends World{
     public void render(Graphics2D gtd) {
         super.render(gtd);
         makeAssets(gtd);
-        if (handler.getKeyManager().devSkip) World.setCurrentWorld(new Level2(handler));
+        if (handler.getKeyManager().devSkip) World.setCurrentWorld(new Level3(handler));
     }
 
     @Override

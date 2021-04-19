@@ -25,6 +25,8 @@ public class Box extends Tile{
             }
         },100);
         //System.out.println("Working");
+        tileWidth = 50;
+        tileHeight = 50;
     }
 
 

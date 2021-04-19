@@ -1,6 +1,9 @@
 package com.worlds;
 
+import com.gfx.Assets;
+import com.tiles.MovingPlatform;
 import com.tiles.Tile;
+import com.tiles.Wall;
 import com.utils.Handler;
 
 import java.util.TimerTask;
@@ -40,12 +43,13 @@ public class Level3 extends World{
             public void run() {
                 handler.getPlayer().setCanMove(true);
             }
-        }, 700);
+        }, 100);
     }
 
     @Override
     public void makeTiles(int offset) {
-
+        tiles.add(new MovingPlatform(0, 500,500, handler, false));
+        tiles.add(new Wall(0,300,500,handler,false));
     }
 
     @Override
